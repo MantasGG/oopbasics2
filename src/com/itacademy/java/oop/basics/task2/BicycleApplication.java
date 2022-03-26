@@ -2,9 +2,8 @@ package com.itacademy.java.oop.basics.task2;
 
 public class BicycleApplication {
     public static void main(String[] args) {
-        MountainBike mountainBike = new MountainBike();
-        RoadBike roadBike = new RoadBike();
-        Speedometer speedometer = new Speedometer();
+        Bicycle mountainBike = new MountainBike();
+        Bicycle roadBike = new RoadBike();
 
         mountainBike.speedUp(10);
         roadBike.speedUp(20);
@@ -57,14 +56,14 @@ public class BicycleApplication {
         mountainBike.speedUp(30);
         roadBike.speedUp(10);
 
-        speedometer.chooseWinner(mountainBike,roadBike);
+        Speedometer.chooseWinner((MountainBike) mountainBike, (RoadBike) roadBike);
 
         roadBike.speedUp(10);
 
-        speedometer.chooseWinner(mountainBike,roadBike);
+        Speedometer.chooseWinner((MountainBike) mountainBike, (RoadBike) roadBike);
 
         roadBike.speedUp(10);
 
-        speedometer.chooseWinner(mountainBike,roadBike);
+        Speedometer.chooseWinner((MountainBike) mountainBike, (RoadBike) roadBike);
     }
 }

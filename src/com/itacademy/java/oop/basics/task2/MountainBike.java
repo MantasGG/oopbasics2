@@ -6,7 +6,7 @@ public class MountainBike implements Bicycle {
     private final int maxGear = 20;
     private final int minGear = 0;
     private int gear;
-    private int speed = 0;
+    private int speed;
 
     @Override
     public void changeGear(int newGear) {
