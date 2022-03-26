@@ -5,17 +5,17 @@ public class Circle extends Shape {
     double perimeter;
 
     @Override
-    void calculateArea(double radius) {
+    public void calculateArea(double radius) {
         area = radius * radius * Math.PI;
     }
 
     @Override
-    void calculatePerimeter(double radius) {
+    public void calculatePerimeter(double radius) {
         perimeter = 2 * Math.PI * radius;
     }
 
     @Override
-    void print() {
+    public void print() {
         System.out.println("Circle area: " + area + " and perimeter: " + perimeter);
     }
 }
