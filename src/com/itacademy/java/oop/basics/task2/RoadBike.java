@@ -4,8 +4,8 @@ public class RoadBike implements Bicycle {
     private final int maxSpeed = 50;
     private final int minSpeed = 0;
     private final int minGear = 0;
-    private int gear;
-    private int speed;
+    private int gear = 0;
+    private int speed = 0;
 
     @Override
     public void changeGear(int newGear) {
