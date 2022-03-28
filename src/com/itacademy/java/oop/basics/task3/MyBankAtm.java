@@ -40,7 +40,7 @@ public class MyBankAtm implements Atm {
                 this.balance -= amount;
                 System.out.println(
                         debitCard.cardHolderName()
-                                + " has made withdrawal with credit card "
+                                + " has made withdrawal with debit card "
                                 + debitCard.cardNumber()
                                 + " balance: "
                                 + debitCard.balance()

@@ -2,11 +2,11 @@ package com.itacademy.java.oop.basics.task3;
 
 public class CreditCard extends Card {
 
-    final String cardHolderName;
-    final String cardNumber;
-    double balance;
-    final double credit;
-    final double interest = 1;
+    private final String cardHolderName;
+    private final String cardNumber;
+    private double balance;
+    private final double credit;
+    private final double interest = 1;
 
     public CreditCard(String name, String cardNumber, double balance, double credit) {
         this.cardHolderName = name;

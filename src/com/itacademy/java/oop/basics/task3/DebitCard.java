@@ -2,9 +2,9 @@ package com.itacademy.java.oop.basics.task3;
 
 public class DebitCard extends Card {
 
-    final String cardHolderName;
-    final String cardNumber;
-    double balance;
+    private final String cardHolderName;
+    private final String cardNumber;
+    private double balance;
 
     public DebitCard(String name, String cardNumber, double balance) {
         this.cardHolderName = name;

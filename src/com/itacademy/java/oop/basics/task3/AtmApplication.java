@@ -10,31 +10,11 @@ public class AtmApplication {
 
         try {
             myBankAtm.withdraw((CreditCard) creditCard, 100);
-        } catch (NotEnoughCreditException e) {
-            System.out.println(e);
-        }
-
-        try {
             myBankAtm.withdraw((DebitCard) debitCard, 100);
-        } catch (NotEnoughBalanceException e) {
-            System.out.println(e);
-        }
-
-        try {
             myBankAtm.withdraw((CreditCard) creditCard, 900);
-        } catch (NotEnoughCreditException e) {
-            System.out.println(e);
-        }
-
-        try {
             myBankAtm.withdraw((DebitCard) debitCard, 100);
-        } catch (NotEnoughBalanceException e) {
-            System.out.println(e);
-        }
-
-        try {
             myBankAtm.withdraw((CreditCard) creditCard, 500);
-        } catch (NotEnoughCreditException e) {
+        } catch (NotEnoughCreditException | NotEnoughBalanceException e) {
             System.out.println(e);
         }
     }
