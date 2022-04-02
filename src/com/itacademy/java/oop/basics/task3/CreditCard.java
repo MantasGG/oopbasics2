@@ -22,11 +22,16 @@ public class CreditCard extends Card {
 
     @Override
     double debit(double amount) {
-        if (this.balance - (amount * (1 + (interest / 100))) < this.credit * -1) {
-            throw new NotEnoughCreditException("Customer " + cardHolderName + " with card number " + cardNumber + " have not enough credit!");
+        try {
+            if (this.balance - (amount * (1 + (interest / 100))) < this.credit * -1) {
+                throw new NotEnoughCreditException("Customer " + cardHolderName + " with card number " + cardNumber + " have not enough credit!");
+            }
+            this.balance -= amount * (1 + interest / 100);
+            return this.balance;
+        } catch (NotEnoughCreditException e) {
+            System.out.println(e);
+            return 0;
         }
-        this.balance -= amount * (1 + interest / 100);
-        return this.balance;
     }
 
     @Override

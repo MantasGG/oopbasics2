@@ -19,11 +19,16 @@ public class DebitCard extends Card {
 
     @Override
     double debit(double amount) {
-        if (this.balance - amount < 0) {
-            throw new NotEnoughBalanceException("Customer " + cardHolderName + " with card number " + cardNumber + " have not enough balance!");
+        try {
+            if (this.balance - amount < 0) {
+                throw new NotEnoughBalanceException("Customer " + cardHolderName + " with card number " + cardNumber + " have not enough balance!");
+            }
+            this.balance -= amount;
+            return balance;
+        } catch (NotEnoughBalanceException e) {
+            System.out.println(e);
+            return 0;
         }
-        this.balance -= amount;
-        return balance;
     }
 
     @Override

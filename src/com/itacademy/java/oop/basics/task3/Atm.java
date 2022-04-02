@@ -1,7 +1,7 @@
 package com.itacademy.java.oop.basics.task3;
 
-public interface Atm {
-    void withdraw(CreditCard creditCard, double amount);
+import java.util.List;
 
-    void withdraw(DebitCard debitCard, double amount);
+public interface Atm {
+    void withdraw(List<Card> cards, double amount);
 }
